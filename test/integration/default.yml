@@ -4,4 +4,3 @@
   environment:
     PKG_PATH: "http://ftp.openbsd.org/pub/OpenBSD/{{ ansible_distribution_release }}/packages/{{ ansible_architecture }}/"
   vars:
-    editors_config: ""

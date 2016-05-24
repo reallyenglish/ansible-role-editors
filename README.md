@@ -1,7 +1,7 @@
 ansible-role-editors
 =====================
 
-A brief description of the role goes here.
+Install editors.
 
 Requirements
 ------------
@@ -11,8 +11,10 @@ None
 Role Variables
 --------------
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| editors\_to\_add | a list of editors to install | {% if ansible\_os\_family == 'FreeBSD' %}[ 'vim-lite', 'emacs-nox11' ]{% elif ansible\_os\_family == 'OpenBSD' %}[ 'vim--no\_x11', 'emacs-24.5p2-no\_x11' ]{% else %}[ 'vim', 'emacs' ]{% endif %} |
+| editors\_map | this variable is currently not used see [issue 15649](https://github.com/ansible/ansible/issues/15649) | {{ \_\_editors\_map }} |
 
 
 Dependencies
@@ -23,6 +25,13 @@ None
 Example Playbook
 ----------------
 
+If you install vim and emacs, no configuration is needed except OpenBSD (PKG\_PATH must be defined somehow).
+
+    - hosts: localhost
+      roles:
+        - ansible-role-editors
+      environment:
+        PKG_PATH: "http://ftp.openbsd.org/pub/OpenBSD/{{ ansible_distribution_release }}/packages/{{ ansible_architecture }}/"
 
 License
 -------
