@@ -1,6 +1,7 @@
 - hosts: localhost
+  pre_tasks:
+    - shell: "echo 'installpath = ftp.jaist.ac.jp' > /etc/pkg.conf"
+      changed_when: false
   roles:
     - ansible-role-editors
-  environment:
-    PKG_PATH: "{% if ansible_os_family == OpnBSD %}http://ftp.openbsd.org/pub/OpenBSD/{{ ansible_distribution_release }}/packages/{{ ansible_architecture }}/{% endif %}"
   vars:
