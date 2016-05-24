@@ -1,0 +1,5 @@
+__editors_map:
+  vim:
+    name: vim-lite
+  emacs:
+    name: emacs-nox11
