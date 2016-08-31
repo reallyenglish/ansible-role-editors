@@ -2,6 +2,9 @@
 driver:
   name: vagrant
 
+transport:
+  name: rsync
+
 provisioner:
   hosts: test-kitchen
   name: ansible_playbook
@@ -26,8 +29,6 @@ platforms:
     driver_config:
       ssh:
         shell: '/bin/sh'
-    transport:
-      name: sftp
 
   - name: openbsd-5.9-amd64
     driver:
@@ -37,8 +38,6 @@ platforms:
     provisioner:
       extra_vars:
         ansible_python_interpreter: '/usr/local/bin/python2.7'
-    transport:
-      name: sftp
 
 suites:
   - name: default
