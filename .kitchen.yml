@@ -31,9 +31,10 @@ platforms:
       ssh:
         shell: '/bin/sh'
 
-  - name: openbsd-5.9-amd64
+  - name: openbsd-6.0-amd64
     driver:
-      box: trombik/ansible-openbsd-5.9-amd64
+      box: trombik/ansible-openbsd-6.0-amd64
+      box_check_update: false
       ssh:
         shell: '/bin/sh'
     provisioner:
@@ -44,7 +45,7 @@ suites:
   - name: default
     provisioner:
       name: ansible_playbook
-      playbook: test/integration/default.yml
+      playbook: tests/serverspec/default.yml
     verifier:
       name: shell
-      command: rspec -c -f d -I spec/serverspec spec/serverspec/default_spec.rb
+      command: rspec -c -f d -I tests/serverspec tests/serverspec/default_spec.rb

@@ -1,15 +1,12 @@
-ansible-role-editors
-=====================
+# ansible-role-editors
 
 Install editors.
 
-Requirements
-------------
+# Requirements
 
 None
 
-Role Variables
---------------
+# Role Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -17,13 +14,11 @@ Role Variables
 | editors\_map | this variable is currently not used see [issue 15649](https://github.com/ansible/ansible/issues/15649) | {{ \_\_editors\_map }} |
 
 
-Dependencies
-------------
+# Dependencies
 
 None
 
-Example Playbook
-----------------
+# Example Playbook
 
 If you install vim and emacs, no configuration is needed except OpenBSD (PKG\_PATH must be defined somehow).
 
@@ -33,9 +28,9 @@ If you install vim and emacs, no configuration is needed except OpenBSD (PKG\_PA
       environment:
         PKG_PATH: "http://ftp.openbsd.org/pub/OpenBSD/{{ ansible_distribution_release }}/packages/{{ ansible_architecture }}/"
 
-License
--------
+# License
 
+```
 Copyright (c) 2016 Tomoyuki Sakurai <tomoyukis@reallyenglish.com>
 
 Permission to use, copy, modify, and distribute this software for any
@@ -49,9 +44,9 @@ ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
 ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+```
 
-Author Information
-------------------
+# Author Information
 
 Tomoyuki Sakurai <tomoyukis@reallyenglish.com>
 
