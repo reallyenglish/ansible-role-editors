@@ -31,9 +31,9 @@ platforms:
       ssh:
         shell: '/bin/sh'
 
-  - name: openbsd-5.9-amd64
+  - name: openbsd-6.0-amd64
     driver:
-      box: trombik/ansible-openbsd-5.9-amd64
+      box: trombik/ansible-openbsd-6.0-amd64
       box_check_update: false
       ssh:
         shell: '/bin/sh'
