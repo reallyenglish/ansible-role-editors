@@ -1,7 +1,4 @@
 - hosts: localhost
-  pre_tasks:
-    - shell: "echo 'installpath = ftp.jaist.ac.jp' > /etc/pkg.conf"
-      changed_when: false
   roles:
     - ansible-role-editors
   vars:
