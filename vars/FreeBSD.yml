@@ -1,5 +1,3 @@
-__editors_map:
-  vim:
-    name: vim-lite
-  emacs:
-    name: emacs-nox11
+editor_package_names:
+  vim: vim-lite
+  emacs: emacs-nox11
