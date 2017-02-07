@@ -10,8 +10,8 @@ None
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| editors\_to\_add | a list of editors to install | {% if ansible\_os\_family == 'FreeBSD' %}[ 'vim-lite', 'emacs-nox11' ]{% elif ansible\_os\_family == 'OpenBSD' %}[ 'vim--no\_x11', 'emacs-24.5p2-no\_x11' ]{% else %}[ 'vim', 'emacs' ]{% endif %} |
-| editors\_map | this variable is currently not used see [issue 15649](https://github.com/ansible/ansible/issues/15649) | {{ \_\_editors\_map }} |
+| editor\_packages | a list of editors to install | [ 'vim', 'emacs' ] |
+| editor\_package\_names | platform specific editor package names |
 
 
 # Dependencies

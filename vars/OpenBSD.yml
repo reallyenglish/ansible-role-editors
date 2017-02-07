@@ -1,6 +1,3 @@
-__editors_map:
+editor_package_names:
   vim: vim--no_x11
-  # emacs--no_x11 does not work here. because it matches emacs-24.5p2-no_x11
-  # and emacs-21.4p32-no_x11. #97 would fix the issue.
-  # https://github.com/ansible/ansible-modules-extras/issues/97
-  emacs: emacs-24.5p2-no_x11
+  emacs: emacs-24.5p5-no_x11
