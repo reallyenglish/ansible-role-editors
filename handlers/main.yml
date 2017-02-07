@@ -1,6 +1,0 @@
----
-
-- name: Restart editors_config
-  service:
-    name: editors
-    state: restarted
