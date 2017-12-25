@@ -1,4 +1,4 @@
-editors_to_add: "{% if ansible_os_family == 'FreeBSD' %}[ 'vim-lite', 'emacs-nox11' ]{% elif ansible_os_family == 'OpenBSD' %}[ 'vim--no_x11', 'emacs-24.5p2-no_x11' ]{% else %}[ 'vim', 'emacs' ]{% endif %}"
+editors_to_add: "{% if ansible_os_family == 'FreeBSD' %}[ 'vim-lite', 'emacs-nox11' ]{% elif ansible_os_family == 'OpenBSD' %}[ 'vim--no_x11', 'emacs-24.5p5-no_x11' ]{% else %}[ 'vim', 'emacs' ]{% endif %}"
 
 # XXX this variable is to be used when #15649 is fixed
 # https://github.com/ansible/ansible/issues/15649
